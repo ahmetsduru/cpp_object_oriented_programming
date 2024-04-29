@@ -36,7 +36,8 @@ class engineer : public employee{
     float performance;
 
     public:
-    void performance_criteria(float a);
+    void performance_criteria(engineer a);
+    void set_performance(float a);
 
 };
 
@@ -45,7 +46,8 @@ int main()
     engineer ahmet;
     ahmet.set_salary(55000.23);
     ahmet.get_salary();
-    ahmet.performance_criteria(5.1);
+    ahmet.set_performance(6.8);
+    ahmet.performance_criteria(ahmet);
     ahmet.get_salary();
     ahmet.set_tax(2000.5);
     ahmet.get_tax();
@@ -57,8 +59,12 @@ int main()
     return 0;
 }
 
-void engineer::performance_criteria(float a){
-    salary += a;
+void engineer::set_performance(float a){
+    performance = a;
+}
+
+void engineer::performance_criteria(engineer a){
+    salary += a.performance;
 }
 
 float human::get_weight(){
