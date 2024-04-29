@@ -59,15 +59,15 @@ int rectangle::get_width(){
     return width;
 }
 
-rectangle rectangle::operator+(const rectangle &d){
+rectangle rectangle::operator+(const rectangle &d){ // operator overloading
     rectangle r1;
     r1.height = this -> height + d.height;
     r1.width = this -> width + d.width;
     return r1;
 }
     
-rectangle rectangle::operator-(const rectangle &f){
-    rectangle r2;
+rectangle rectangle::operator-(const rectangle &f){ //operator overloading
+    rectangle r2; 
     r2.height = this -> height - f.height;
     r2.width = this -> width - f.width;
     return r2;
