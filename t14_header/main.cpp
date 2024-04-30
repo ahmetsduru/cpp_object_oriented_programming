@@ -19,5 +19,6 @@ int main()
     a.set_width(8);
     cout << c.circumference_cal(a) << endl; // pass by object
     cout << b.circumference_cal(a) << endl;
+    cout << a.area_cal(a.get_height(),a.get_width()) << endl;
     return 0;
 }
